@@ -1,0 +1,113 @@
+/* ABOUT.CSS 
+STYLES FOR (RESPONSIVE) ABOUT PAGE ONLY
+*/
+
+
+body {
+	background: #fff;
+}
+
+.container {
+	padding: 5% 0 5% 5%;
+}
+
+/* HEADER STYLES ========================== */
+header {
+  height: 40px;
+  border-bottom: 1px solid #edeeee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #ddd;
+  background-color: #fff;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1em;
+  z-index: 1;
+
+  }
+
+/* COLUMN STYLES ========================== */
+
+h2 {
+	margin-top: 2em;
+}
+
+[class*='col-'] {
+	padding-right: 5%;
+	display: inline-block;
+	font-family: 'Droid Serif', serif;
+} 
+
+[class*='col-']:last-of-type {
+	padding-right: 0;
+}
+
+.col-1-3 {
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	width: 30%;
+}
+
+/* ======================================
+ 
+    MediaQuery-Reporter Styles
+ 
+========================================= */
+
+
+body:after {
+	content: "less than 320px";
+
+	font-size: 100%;
+	position: fixed;
+	bottom: 2em;
+	width: 100%;
+
+	text-align: center;
+	background-color: hsla(1,60%,40%,0.7);
+	font-weight: bold;
+	color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+	/*shows up when screen is wider than 1024px*/
+	body:after {
+		content: "320 to 480px";
+		background-color: hsla(90,60%,40%,0.7);
+	}
+	.col-1-3 {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	/*shows up when screen is wider than 1024px*/
+	body:after {
+		content: "480 to 768px";
+		background-color: hsla(180,60%,40%,0.7);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/*shows up when screen is wider than 1024px*/
+	body:after {
+		content: "768 to 1024px";
+		background-color: hsla(312,21%,29%,0.7);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	/*shows up when screen is wider than 1024px*/
+	body:after {
+		content: "1024px and up";
+		background-color: hsla(2,31%,53%,0.7);
+	}
+}

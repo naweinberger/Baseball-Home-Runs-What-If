@@ -1,0 +1,315 @@
+/* BLOG.CSS 
+STYLES FOR BLOG ONLY
+*/
+
+
+body {
+  background: #fff
+}
+
+/*  HEADER STYLES ===================================*/
+
+header {
+  height: 40px;
+  border-bottom: 1px solid #edeeee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #ddd;
+  background-color: #fff;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1em;
+  z-index: 1;
+
+  }
+/*  END HEADER STYLES ==============================*/
+
+/*  STORY STYLES ==============================*/
+
+  .story-body {
+
+  }
+
+  article {
+    margin-top: 60px; /*moves entire article down*/
+    font-size: 16px;
+    display: block;
+  }
+
+  /*title*/
+  .title-kicker {
+    text-transform: uppercase;
+  }
+
+  .title, .title-kicker, .dateline {
+    position: relative;
+    text-align: left;
+    padding-left: 40px;
+    font-family: 'Droid Serif', serif;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .title {
+    font-style: italic;
+  }
+
+  .title:after {
+    vertical-align: top;
+    width: 100%;
+    height: 0.65em;
+    border-bottom: 1px solid #edeeee;
+  }
+
+  .dateline,
+  .date {
+    font-family: 'Neuton', serif;
+    display: inline;
+    font-size: 1rem;
+/*    line-height: 0.75rem;*/
+  }
+
+  .dateline {
+    font-weight: 700;
+  }
+
+  .date {
+    font-weight: 300;
+    margin-left: 10px;
+  }
+
+
+  /*contains figures*/
+  .lead-container {
+    margin: 0 0 45px 0;
+    position: relative;
+  }
+
+  figure {
+    float: none;
+    clear: none;
+  }
+
+  /*social media share*/
+/*  .byline-share-tools {
+    float: left;
+    clear: left;
+    width: 91px;
+    height: 263px;
+    color: #f36283;
+  }*/
+
+  /*story*/
+  p.text {
+    line-height: 23px;
+    margin: 0 0 16px 135px;
+    max-width: 540px;
+    width: 510px;
+    font-family: 'Droid Serif', serif;
+  }
+
+
+/*  END STORY STYLES ==============================*/
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.title:after,
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (max-width: 480px) {
+
+
+}
+
+@media only screen and (max-width: 767px) {
+    h1 {
+      padding-right: 10px;
+    }
+
+    p.text {
+      margin-left: 1em;
+      margin-right: 1em;
+      width: 100%;
+      font-size: 1em;
+    }
+
+    .lead-container, #container {
+      width: 100%;
+      overflow: hidden;
+      margin: 1em auto;
+      padding: 0;
+    }
+
+    img {
+      width: 120%;
+      margin-left: -3em;
+    }
+
+}
+
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
